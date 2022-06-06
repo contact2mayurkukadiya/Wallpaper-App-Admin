@@ -1,0 +1,21 @@
+<div class="position-relative">
+    <div class="login-form-wrapper">
+        <div class="logo-wrapper">
+            <img src="assets/icon/logo.svg" class="logo">
+        </div>
+        <div class="form-control-wrapper">
+            <mat-form-field class="login-control">
+                <img src="assets/icon/user.svg" class="login-icon">
+                <input matInput placeholder="User Name" [(ngModel)]="adminDetail.email" (keydown.enter)="doAdminLogin(adminDetail)">
+            </mat-form-field>
+            <mat-form-field class="login-control">
+                <img src="assets/icon/password.svg" class="login-icon">
+                <input matInput type="password" placeholder="Password" value="demo@123" [(ngModel)]="adminDetail.password" (keydown.enter)="doAdminLogin(adminDetail)">
+            </mat-form-field>
+            <div class="login-button-wrapper">
+                <button mat-raised-button class="login-button" (click)="doAdminLogin(adminDetail)">Login</button>
+            </div>
+            <div class="wave"></div>
+        </div>
+    </div>
+</div>
